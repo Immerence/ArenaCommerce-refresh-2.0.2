@@ -987,6 +987,9 @@
           "label": "Enable sticky header",
           "info": "Header shows on the screen as customers scroll up."
         },
+        "mega_hover": {
+          "label": "Enable mega hover"
+        },
         "margin_bottom": {
           "label": "Bottom margin"
         },
