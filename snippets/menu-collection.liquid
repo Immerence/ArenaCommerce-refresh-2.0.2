@@ -1,23 +1,23 @@
 <nav class="menu-collection__navigation d-none d-lg-block">
-  <ul id="parentLink" class="menu-collection__menu" role="list">
+  <ul id="parentCollectionLink" class="menu-collection__menu" role="list">
     {%- for link in section.settings.menu.links -%}
       <li>
         {%- if link.links != blank -%}
-          {%- assign parentID = 'collapseOne' | append: forloop.index -%}
+          {%- assign parentID = 'collapseCollectionOne' | append: forloop.index -%}
           <div class="list-menu__parent">
-            <div id="headingOne{{forloop.index}}">
-              <div class="menu__toggle-head menu-collection__menu-item accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne{{forloop.index}}" aria-expanded="{% if link.child_active %}true{% else %}false{% endif %}" aria-controls="collapseOne{{forloop.index}}">
+            <div id="headingCollectionOne{{forloop.index}}">
+              <div class="menu__toggle-head menu-collection__menu-item accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCollectionOne{{forloop.index}}" aria-expanded="{% if link.child_active %}true{% else %}false{% endif %}" aria-controls="collapseCollectionOne{{forloop.index}}">
                 <div class="list-menu__item-title">{{ link.title | escape }}</div>
                 <div class="list-menu__item-icon">{% render 'icon-arrow-down' %}</div>
               </div>
             </div>
-            <div id="{{ parentID }}" class="menu__toggle-body accordion-collapse collapse {% if link.child_active %}show{% endif %}" aria-labelledby="headingOne{{forloop.index}}" data-bs-parent="#parentLink">
+            <div id="{{ parentID }}" class="menu__toggle-body accordion-collapse collapse {% if link.child_active %}show{% endif %}" aria-labelledby="headingCollectionOne{{forloop.index}}" data-bs-parent="#parentCollectionLink">
               <ul>
                 {%- for child_link in link.links -%}
                   <li>
                     {%- if child_link.links != blank -%}
                       <div class="menu__toggle-child list-menu__child">
-                        <div class="menu__toggle-head-child" id="subHeadingOne{{forloop.index}}">
+                        <div class="menu__toggle-head-child" id="subHeadingCollectionOne{{forloop.index}}">
                             <div class="menu-collection__menu-item accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#subCollapseOne{{forloop.index}}" aria-expanded="{% if child_link.child_active %}true{% else %}false{% endif %}" aria-controls="subCollapseOne{{forloop.index}}">
                               <div class="list-menu__item-title">{{ child_link.title | escape }}</div>
                               {%- if child_link.links != blank -%}
@@ -25,7 +25,7 @@
                               {%- endif -%}
                             </div>
                         </div>
-                        <ul id="subCollapseOne{{forloop.index}}" class="menu__toggle-body-child menu__toggle-body-child accordion-collapse collapse {% if child_link.child_active %}show{% endif %}" aria-labelledby="subHeadingOne{{forloop.index}}" data-bs-parent="#{{ parentID }}">
+                        <ul id="subCollapseOne{{forloop.index}}" class="menu__toggle-body-child menu__toggle-body-child accordion-collapse collapse {% if child_link.child_active %}show{% endif %}" aria-labelledby="subHeadingCollectionOne{{forloop.index}}" data-bs-parent="#{{ parentID }}">
                           {%- for grand_children_link in child_link.links -%}
                             <a href="{{ grand_children_link.url }}" class="menu-collection__menu-item list-menu__item link link--text focus-inset {% if grand_children_link.current %}header__active-menu-item"{% endif %}">
                               {{ grand_children_link.title | escape }}
