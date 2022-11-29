@@ -257,6 +257,12 @@
       <li id="a11y-refresh-page-message">{{ 'accessibility.refresh_page' | t }}</li>
       <li id="a11y-new-window-message">{{ 'accessibility.link_messages.new_window' | t }}</li>
     </ul>
+    
+    {%- if settings.mega_hover -%}
+      {%- assign isHover = true -%}
+    {%- else -%}
+      {%- assign isHover = false -%}
+    {%- endif -%}
 
     <script>
       window.shopUrl = '{{ request.origin }}';
@@ -286,7 +292,7 @@
         playSlideshow: `{{ 'sections.slideshow.play_slideshow' | t }}`,
       }
 
-      window.hover = `{{ settings.mega_hover }}`
+      window.hover = {{ isHover }}
     </script>
 
     {%- if settings.predictive_search_enabled -%}
