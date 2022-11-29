@@ -150,6 +150,7 @@
           "logo_position": "middle-left",
           "menu": "main-menu",
           "menu_type_desktop": "mega",
+          "column_condition": 4,
           "show_line_separator": false,
           "enable_sticky_header": true,
           "mobile_logo_position": "center",
