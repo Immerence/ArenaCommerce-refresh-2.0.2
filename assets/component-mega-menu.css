@@ -65,13 +65,15 @@
   margin-bottom: 0.8rem;
 }
 
-.header--top-center .mega-menu__list {
+.header--top-center .mega-menu__list,
+.header--middle-left .mega-menu__list{
   display: flex;
   flex-wrap: wrap;
   column-gap: 0;
 }
 
-.header--top-center .mega-menu__list > li {
+.header--top-center .mega-menu__list > li,
+.header--middle-left .mega-menu__list > li{
   width: 16%;
   padding: 1.2rem;
 }
