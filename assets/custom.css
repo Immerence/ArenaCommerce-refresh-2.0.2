@@ -69,15 +69,15 @@
     display: -webkit-inline-box !important;
     display: inline-flex !important;
   }
-  .page-width.collection-group {
+  .collection-group {
     display: flex;    
   }
-  .page-width.collection-group > .collection-group__item:first-child {
+  .collection-group > .collection-group__item:first-child {
     flex: 0 0 25%;
     max-width: 25%;
     padding: 0 3rem 0 0;
   }
-  .page-width.collection-group > .collection-group__item:last-child {    
+  .collection-group > .collection-group__item:last-child {    
     flex: 1;
     min-width: 0;
   }
