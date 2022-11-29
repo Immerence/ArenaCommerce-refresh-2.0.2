@@ -682,7 +682,12 @@
     }
 
     hover(){
-      console.log(window.hover);
+      let isHover = window.hover || false;
+
+      if(!isHover){
+        return
+      }
+      console.log(123123123123);
       console.log(window.hover);
     }
 
