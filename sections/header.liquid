@@ -690,12 +690,12 @@
       let items = this.querySelector(".header__inline-menu").querySelectorAll(".list-menu li");
       items.forEach((item) => {
         item.addEventListener("mouseover", () => {
-          item.setAttribute("open", true);
+          item.querySelector('details').setAttribute("open", true);
           item.querySelector("summary").setAttribute("aria-expanded", "true");
           item.addEventListener("mouseout", () => {
-            item.removeAttribute("open");
+            item.querySelector('details').removeAttribute("open");
             item.querySelector("summary").setAttribute("aria-expanded", "false");
-          });
+          }); 
         });
       });
     }
