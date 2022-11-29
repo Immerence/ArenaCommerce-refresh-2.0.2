@@ -664,6 +664,7 @@
       window.addEventListener('scroll', this.onScrollHandler, false);
 
       this.createObserver();
+      this.hover();
     }
 
     disconnectedCallback() {
@@ -678,6 +679,10 @@
       });
 
       observer.observe(this.header);
+    }
+
+    hover(){
+      console.log(13123123);
     }
 
     onScroll() {
