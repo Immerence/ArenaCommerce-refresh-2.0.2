@@ -687,7 +687,7 @@
       if(!isHover){
         return
       }
-      let items = this.querySelector(".header__inline-menu").querySelectorAll("details");
+      let items = this.querySelector(".header__inline-menu").querySelectorAll(".list-menu li");
       items.forEach((item) => {
         item.addEventListener("mouseover", () => {
           item.setAttribute("open", true);
