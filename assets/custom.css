@@ -1,0 +1,85 @@
+.header--top-center .header__inline-menu > .list-menu--inline {
+  display: flex;  
+  width: 100%;
+}
+.header--top-center .header__inline-menu > .list-menu--inline > li:last-child {
+  margin-left: auto;
+}
+.menu-collection__navigation {
+  list-style: none;
+}
+.menu-collection__navigation li {
+  list-style: none;
+}
+.menu-collection__navigation .menu-collection__menu {
+  padding: 0;
+}
+.menu-collection__navigation .menu-collection__menu a {
+  padding: 7px 0;
+}
+.menu-collection__navigation .menu-collection__menu-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 7px 0;
+}
+.menu-collection__navigation .menu-collection__menu-item[aria-expanded="true"] > .list-menu__item-icon {
+  transform: rotate(180deg);
+}
+.menu-collection__navigation .menu-collection__menu-item .list-menu__item-icon {
+  display: flex;
+  transition: all .35s ease-in-out 0s;
+}
+.menu-collection__navigation .menu-collection__menu-item .list-menu__item-icon svg {
+  width: 18px;
+  height: auto;
+}
+.menu-collection__navigation .menu__toggle-body ul {
+  padding-left: 20px;
+}
+@media (min-width: 992px) {
+  .d-lg-none {
+    display: none !important;
+  }
+  .d-lg-inline {
+    display: inline !important;
+  }
+  .d-lg-inline-block {
+    display: inline-block !important;
+  }
+  .d-lg-block {
+    display: block !important;
+  }
+  .d-lg-table {
+    display: table !important;
+  }
+  .d-lg-table-row {
+    display: table-row !important;
+  }
+  .d-lg-table-cell {
+    display: table-cell !important;
+  }
+  .d-lg-flex {
+    display: -ms-flexbox !important;
+    display: -webkit-box !important;
+    display: flex !important;
+  }
+  .d-lg-inline-flex {
+    display: -ms-inline-flexbox !important;
+    display: -webkit-inline-box !important;
+    display: inline-flex !important;
+  }
+  .page-width.collection-group {
+    display: flex;    
+  }
+  .page-width.collection-group > .collection-group__item:first-child {
+    flex: 0 0 25%;
+    max-width: 25%;
+    padding: 0 3rem 0 0;
+  }
+  .page-width.collection-group > .collection-group__item:last-child {    
+    flex: 1;
+    min-width: 0;
+  }
+  
+}
